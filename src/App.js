@@ -1,8 +1,8 @@
 import React from 'react'
-import './App.css'
 import SpeechRecognition, {
   useSpeechRecognition,
 } from 'react-speech-recognition'
+import './App.css'
 
 export default function Dictaphone() {
   const { transcript, resetTranscript } = useSpeechRecognition()

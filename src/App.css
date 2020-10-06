@@ -31,6 +31,14 @@
   border-radius: 0.4rem;
   color: #e1e1e1;
   font-size: x-large;
+  cursor: pointer;
+  outline: none;
+  transition-duration: 0.3s;
+  text-decoration: none;
+}
+
+.Button:hover {
+  background-color: #4caf50;
 }
 
 .TextContainer {
