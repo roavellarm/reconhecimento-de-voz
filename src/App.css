@@ -53,13 +53,15 @@
 
 .Title {
   text-align: center;
-  color: #e1e1e1;
+  color: #4caf50;
+  margin-bottom: 20px;
 }
 
 .Text {
-  text-align: center;
+  text-align: left;
   color: #e1e1e1;
-  line-height: 1.5rem;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 @media screen and (max-width: 700px) {
