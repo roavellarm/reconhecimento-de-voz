@@ -17,13 +17,23 @@ export default function Dictaphone() {
   }
   const { transcript, resetTranscript } = useSpeechRecognition()
   const [state, setState] = useState(initialState)
+  const [isStarted, setIsStarted] = useState(false)
+  const { stopListening, browserSupportsSpeechRecognition } = SpeechRecognition
 
-  const listen = () => {
+  const start = () => {
+    setIsStarted(true)
     SpeechRecognition.startListening({
       continuous: true,
       language: state.language,
     })
   }
+
+  const stop = () => {
+    setIsStarted(false)
+    return stopListening()
+  }
+
+  const clear = () => resetTranscript()
 
   const onChangeLanguage = () => {
     if (state.language !== 'pt-BR') return setState(initialState)
@@ -38,7 +48,7 @@ export default function Dictaphone() {
     })
   }
 
-  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+  if (!browserSupportsSpeechRecognition()) {
     return alert('Este browser não tem suporte para reconhecimento de voz')
   }
 
@@ -49,12 +59,13 @@ export default function Dictaphone() {
       <Switch language={state.language} onChange={onChangeLanguage} />
 
       <S.ButtonsContainer>
-        <Button title={state.startButton} onClick={() => listen()} />
-        <Button
-          title={state.stopButton}
-          onClick={SpeechRecognition.stopListening}
-        />
-        <Button title={state.clearButton} onClick={resetTranscript} />
+        {!isStarted && (
+          <Button title={state.startButton} onClick={start} color='#4caf50' />
+        )}
+        {isStarted && (
+          <Button title={state.stopButton} onClick={stop} color='#d32f2f' />
+        )}
+        <Button title={state.clearButton} onClick={clear} color='#ffbe50' />
       </S.ButtonsContainer>
 
       <S.TextContainer>

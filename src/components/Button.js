@@ -5,18 +5,19 @@ const StyledButton = styled.button`
   width: 200px;
   padding: 1rem;
   margin: 0.4rem;
-  background: #292929;
+  background: ${({ color }) => color};
   border: none;
   border-radius: 0.4rem;
-  color: #e1e1e1;
+  color: ${({ color }) => (color === '#ffbe50' ? 'black' : '#e1e1e1')};
   font-size: x-large;
   cursor: pointer;
   outline: none;
   transition-duration: 0.3s;
   text-decoration: none;
+  transition: 0.2s;
 
   &:hover {
-    background-color: #4caf50;
+    opacity: 0.6;
   }
 
   @media screen and (max-width: 700px) {
@@ -26,6 +27,10 @@ const StyledButton = styled.button`
   }
 `
 
-export default function Button({ title, onClick }) {
-  return <StyledButton onClick={onClick} >{title}</StyledButton>
+export default function Button({ title, onClick, color }) {
+  return (
+    <StyledButton onClick={onClick} color={color}>
+      {title}
+    </StyledButton>
+  )
 }
