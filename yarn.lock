@@ -1108,7 +1108,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -7602,6 +7602,13 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
+polished@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-4.0.2.tgz#58f6a215dd93038c5b3808725ed31e208c2e6403"
+  integrity sha512-TJd61zfqQrVdysU04GzSKThFWgQrpFLrHZgKfv5BwRSxOrqFIgzLYKWWML4Q8EMMsJBUgwMitI10w9lpBMo+xQ==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+
 portfinder@^1.0.26:
   version "1.0.28"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.28.tgz#67c4622852bd5374dd1dd900f779f53462fac778"
@@ -8626,6 +8633,13 @@ react-speech-recognition@^3.2.3:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/react-speech-recognition/-/react-speech-recognition-3.2.3.tgz#974fa44c3460e5c5199aaaf601b0f3c1c34f76ec"
   integrity sha512-xt6vVrJXZvXIp6W7dCAJTAVwNO1L0rN6BHvM3J5NkILYuhY403AkQsRb0NWSjkR6ZpaRhv7otFjD1r7x7h4HQA==
+
+react-switch@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/react-switch/-/react-switch-5.0.1.tgz#449277f4c3aed5286fffd0f50d5cbc2a23330406"
+  integrity sha512-Pa5kvqRfX85QUCK1Jv0rxyeElbC3aNpCP5hV0LoJpU/Y6kydf0t4kRriQ6ZYA4kxWwAYk/cH51T4/sPzV9mCgQ==
+  dependencies:
+    prop-types "^15.6.2"
 
 react@^16.13.1:
   version "16.13.1"

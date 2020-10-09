@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "polished": "^4.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "react-speech-recognition": "^3.2.3",
+    "react-switch": "^5.0.1",
     "styled-components": "^5.2.0"
   },
   "scripts": {
