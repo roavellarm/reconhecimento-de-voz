@@ -31,10 +31,6 @@ export const ButtonsContainer = styled.div`
   align-items: center;
   width: 100%;
   max-width: 700px;
-
-  @media screen and (max-width: 700px) {
-    padding-top: 10px;
-  }
 `
 
 export const TextContainer = styled.div`
